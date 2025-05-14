@@ -95,3 +95,25 @@ Caused by: java.lang.ClassNotFoundException: io.helidon.common.mapper.spi.Mapper
 
 
 ```
+
+# Workaround
+
+```shell
+cp reflect-config.json src/main/resources/META-INF/native-image/a/b 
+```
+
+Rebuild
+```shell
+mvn clean package -Pnative
+```
+Rerun
+```shell
+./target/hello-helidon
+```
+```shell
+curl -X POST "http://localhost:8080/basic" -d 'IAmBodyContent'
+```
+#### Successful expected output
+```
+Got[IAmBodyContent]
+```
