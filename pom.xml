@@ -54,8 +54,7 @@
                   <mainClass>org.example.Main</mainClass>
                   <buildArgs>
                     <buildArg>--no-fallback</buildArg>
-<!--                    <buildArg>&#45;&#45;emit build-report</buildArg>-->
-<!--                    <buildArg>&#45;&#45;allow-incomplete-classpath</buildArg>-->
+                    <buildArg>--initialize-at-run-time=io.helidon.logging.common.LogConfig</buildArg>
                   </buildArgs>
                 </configuration>
               </execution>
